@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import styles from './index.scss';
-import Routes from './routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import styles from "./index.scss";
+import App from "./App";
 
 const Index = () => (
   <div className={styles.cb}>
-    <Routes />
+    <App />
   </div>
 );
 
-ReactDOM.render(<Index />, document.getElementById('index'));
+ReactDOM.render(<Index />, document.getElementById("index"));

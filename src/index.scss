@@ -1,3 +1,55 @@
-.cb {
-  color: red;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.notification-container {
+  font-family: sans-serif;
+  position: relative;
+  margin-bottom: 16px;
+  padding: 16px 30px;
+  overflow: hidden;
+  line-height: 1.5;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+.notification-icon {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  img {
+    width: 20px;
+  }
+}
+
+.notification {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.notification-title {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.notification-desc {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.close-notification {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  outline: none;
+  img {
+    width: 10px;
+  }
 }
