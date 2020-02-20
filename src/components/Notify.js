@@ -21,15 +21,15 @@ class Notify extends Component {
 
     switch (position) {
       case "topLeft":
-        return { top: 0, left: 0 };
+        return { top: "20px", left: "20px" };
       case "topRight":
-        return { top: 0, right: 0 };
+        return { top: "20px", right: "20px" };
       case "bottomLeft":
-        return { bottom: 0, left: 0 };
+        return { bottom: "20px", left: "20px" };
       case "bottomRight":
-        return { bottom: 0, right: 0 };
+        return { bottom: "20px", right: "20px" };
       default:
-        return { top: 0, left: 0 };
+        return { top: "20px", left: "20px" };
     }
   };
 

@@ -6,7 +6,7 @@ class App extends Component {
   state = {};
 
   handleClick = () => {
-    notification.error({
+    notification.success({
       title: "Title",
       description: "Some description",
       type: "notification"
