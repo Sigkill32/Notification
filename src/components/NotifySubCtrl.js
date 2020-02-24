@@ -9,16 +9,20 @@ class NotifySubCtrl {
     type,
     className,
     width,
-    position,
-    notificationId
+    // position,
+    notificationId,
+    onNotificationClick,
+    onNotificationClose
   ) {
     this.title = title;
     this.description = description;
     this.type = type;
     this.className = className;
     this.width = width;
-    this.position = position;
+    // this.position = position;
     this.notificationId = notificationId;
+    this.onNotificationClick = onNotificationClick;
+    this.onNotificationClose = onNotificationClose;
   }
 
   error = (containerDomNode, rand) => {
@@ -46,7 +50,9 @@ class NotifySubCtrl {
         type={this.type}
         className={this.className}
         width={this.width}
-        position={this.position}
+        // position={this.position}
+        onNotificationClick={this.onNotificationClick}
+        onNotificationClose={this.onNotificationClose}
         id={rand}
       />,
       containerDomNode

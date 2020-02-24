@@ -11,11 +11,14 @@ const notification = {
       width,
       position,
       notificationId,
-      containerId
+      containerId,
+      onNotificationClick,
+      onNotificationClose
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
-      containerId
+      containerId,
+      position
     );
     const notifySubCtrl = new NotifySubCtrl(
       title,
@@ -23,7 +26,9 @@ const notification = {
       type,
       className,
       width,
-      position
+      // position,
+      onNotificationClick,
+      onNotificationClose
     );
     notifySubCtrl.success(containerDomNode, rand);
   },
@@ -37,11 +42,14 @@ const notification = {
       width,
       position,
       notificationId,
-      containerId
+      containerId,
+      onNotificationClick,
+      onNotificationClose
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
-      containerId
+      containerId,
+      position
     );
     const notifySubCtrl = new NotifySubCtrl(
       title,
@@ -49,7 +57,9 @@ const notification = {
       type,
       className,
       width,
-      position
+      // position,
+      onNotificationClick,
+      onNotificationClose
     );
     notifySubCtrl.error(containerDomNode, rand);
   },
@@ -63,11 +73,14 @@ const notification = {
       width,
       position,
       notificationId,
-      containerId
+      containerId,
+      onNotificationClick,
+      onNotificationClose
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
-      containerId
+      containerId,
+      position
     );
     const notifySubCtrl = new NotifySubCtrl(
       title,
@@ -75,7 +88,9 @@ const notification = {
       type,
       className,
       width,
-      position
+      // position,
+      onNotificationClick,
+      onNotificationClose
     );
     notifySubCtrl.info(containerDomNode, rand);
   },
@@ -89,11 +104,14 @@ const notification = {
       width,
       position,
       notificationId,
-      containerId
+      containerId,
+      onNotificationClick,
+      onNotificationClose
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
-      containerId
+      containerId,
+      position
     );
     const notifySubCtrl = new NotifySubCtrl(
       title,
@@ -101,7 +119,9 @@ const notification = {
       type,
       className,
       width,
-      position
+      // position,
+      onNotificationClick,
+      onNotificationClose
     );
     notifySubCtrl.warn(containerDomNode, rand);
   }

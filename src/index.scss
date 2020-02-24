@@ -5,7 +5,7 @@
 
 .notification-container {
   font-family: sans-serif;
-  position: relative;
+  // position: relative;
   margin-bottom: 16px;
   padding: 16px 30px;
   overflow: hidden;
@@ -14,6 +14,7 @@
   border-radius: 4px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   display: inline-block;
+  // animation: slideRight 200ms;
 }
 
 .notification-icon {
@@ -51,5 +52,33 @@
   outline: none;
   img {
     width: 10px;
+  }
+}
+
+@keyframes slideLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-500px);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
   }
 }

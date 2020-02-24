@@ -8,10 +8,10 @@ const Notify = ({
   width,
   id,
   className,
-  onClick,
-  onClose,
+  // onNotificationClick,
+  // onNotificationClose,
   title,
-  position,
+  // position,
   subType
 }) => {
   const renderNotificationIcon = () => {
@@ -26,20 +26,20 @@ const Notify = ({
     } else return null;
   };
 
-  const setPosition = () => {
-    switch (position) {
-      case "topLeft":
-        return { top: "20px", left: "20px" };
-      case "topRight":
-        return { top: "20px", right: "20px" };
-      case "bottomLeft":
-        return { bottom: "20px", left: "20px" };
-      case "bottomRight":
-        return { bottom: "20px", right: "20px" };
-      default:
-        return { top: "20px", left: "20px" };
-    }
-  };
+  // const setPosition = () => {
+  //   switch (position) {
+  //     case "topLeft":
+  //       return { top: "20px", left: "20px", animation: "slideRight 200ms" };
+  //     case "topRight":
+  //       return { top: "20px", right: "20px" };
+  //     case "bottomLeft":
+  //       return { bottom: "20px", left: "20px" };
+  //     case "bottomRight":
+  //       return { bottom: "20px", right: "20px" };
+  //     default:
+  //       return { top: "20px", left: "20px", animation: "slideRight 200ms" };
+  //   }
+  // };
 
   const renderTitle = () => {
     if (type === "notification") {
@@ -52,13 +52,13 @@ const Notify = ({
 
   const handleClose = e => {
     const { id } = e.target;
+    // onNotificationClose(id);
     UnMountNotification(id);
-    // onClose(id);
   };
 
   const handleClick = () => {
-    console.log("click");
-    // onClick(id);
+    console.log("click", id);
+    // onNotificationClick(id);
   };
 
   const UnMountNotification = id => {
@@ -69,7 +69,8 @@ const Notify = ({
   return (
     <div
       className={`notification-container${className ? " " + className : ""}`}
-      style={{ width: `${width}px`, ...setPosition() }}
+      // style={{ width: `${width}px`, ...setPosition() }}
+      style={{ width: `${width}px` }}
       onClick={handleClick}
       id={id}
     >
