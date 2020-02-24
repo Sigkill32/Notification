@@ -40,7 +40,6 @@ const generateContainer = (notificationId, containerId, position) => {
       );
   }
 
-  // containerDomNode.setAttribute("style", "left: 0;position: absolute");
   if (containerId) {
     document.getElementById(containerId).appendChild(containerDomNode);
   } else {

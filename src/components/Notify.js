@@ -8,10 +8,9 @@ const Notify = ({
   width,
   id,
   className,
-  // onNotificationClick,
-  // onNotificationClose,
+  onNotificationClick,
+  onNotificationClose,
   title,
-  // position,
   subType
 }) => {
   const renderNotificationIcon = () => {
@@ -25,21 +24,6 @@ const Notify = ({
       );
     } else return null;
   };
-
-  // const setPosition = () => {
-  //   switch (position) {
-  //     case "topLeft":
-  //       return { top: "20px", left: "20px", animation: "slideRight 200ms" };
-  //     case "topRight":
-  //       return { top: "20px", right: "20px" };
-  //     case "bottomLeft":
-  //       return { bottom: "20px", left: "20px" };
-  //     case "bottomRight":
-  //       return { bottom: "20px", right: "20px" };
-  //     default:
-  //       return { top: "20px", left: "20px", animation: "slideRight 200ms" };
-  //   }
-  // };
 
   const renderTitle = () => {
     if (type === "notification") {

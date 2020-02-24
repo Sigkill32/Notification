@@ -26,7 +26,6 @@ const notification = {
       type,
       className,
       width,
-      // position,
       onNotificationClick,
       onNotificationClose
     );
@@ -57,7 +56,6 @@ const notification = {
       type,
       className,
       width,
-      // position,
       onNotificationClick,
       onNotificationClose
     );
@@ -88,7 +86,6 @@ const notification = {
       type,
       className,
       width,
-      // position,
       onNotificationClick,
       onNotificationClose
     );
@@ -119,7 +116,6 @@ const notification = {
       type,
       className,
       width,
-      // position,
       onNotificationClick,
       onNotificationClose
     );
