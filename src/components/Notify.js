@@ -53,12 +53,12 @@ const Notify = ({
   const handleClose = e => {
     const { id } = e.target;
     UnMountNotification(id);
-    // onClose();
+    // onClose(id);
   };
 
   const handleClick = () => {
     console.log("click");
-    // onClick();
+    // onClick(id);
   };
 
   const UnMountNotification = id => {
@@ -73,20 +73,20 @@ const Notify = ({
       onClick={handleClick}
       id={id}
     >
-      {renderNotificationIcon()}
       <div className='notification'>
-        {renderTitle()}
-        {typeof description === "string" ? (
-          <div className='notification-desc'>{description}</div>
-        ) : (
-          description
-        )}
+        {renderNotificationIcon()}
+        <div className='notification-title-desc'>
+          {renderTitle()}
+          {typeof description === "string" ? (
+            <div className='notification-desc'>{description}</div>
+          ) : (
+            description
+          )}
+        </div>
       </div>
-      {type === "notification" && (
-        <button className='close-notification' onClick={handleClose} id={id}>
-          <img src={closeIcon ? closeIcon : close} alt='close' id={id} />
-        </button>
-      )}
+      <button className='close-notification' onClick={handleClose} id={id}>
+        <img src={closeIcon ? closeIcon : close} alt='close' id={id} />
+      </button>
     </div>
   );
 };

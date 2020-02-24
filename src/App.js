@@ -9,8 +9,18 @@ class App extends Component {
     notification.success({
       title: "Title",
       description: "Some description",
-      type: "notification"
+      type: "message",
+      onClick: this.clicked,
+      onClose: this.closed
     });
+  };
+
+  clicked = id => {
+    console.log(id, "clicked");
+  };
+
+  closed = id => {
+    console.log("closed", id);
   };
 
   render() {
