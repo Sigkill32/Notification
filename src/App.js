@@ -5,7 +5,7 @@ class App extends Component {
   state = {};
 
   handleClick = () => {
-    notification.open({
+    notification.openNotification({
       title: "Title",
       description: "Some description",
       type: "notification",

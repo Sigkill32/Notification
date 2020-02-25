@@ -122,7 +122,7 @@ const notification = {
     notifySubCtrl.warn(containerDomNode, rand);
   },
 
-  open: config => {
+  openNotification: config => {
     const {
       title,
       description,
@@ -149,7 +149,7 @@ const notification = {
       onNotificationClick,
       onNotificationClose
     );
-    notifySubCtrl.open(containerDomNode, rand);
+    notifySubCtrl.openNotification(containerDomNode, rand);
   }
 };
 
