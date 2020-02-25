@@ -49,7 +49,10 @@ const Notify = ({
     if (element) element.parentNode.removeChild(element);
   };
 
-  useEffect(() => closeAfterTime(duration), []);
+  useEffect(() => {
+    if (duration === 0) return;
+    closeAfterTime(duration);
+  }, []);
 
   const closeAfterTime = duration => {
     if (duration) {

@@ -11,8 +11,8 @@ class App extends Component {
       type: "notification",
       position: "topRight",
       onNotificationClose: this.handleClose,
-      onNotificationClick: this.handleNotClick
-      // duration: 5000
+      onNotificationClick: this.handleNotClick,
+      duration: 0
     });
   };
 
