@@ -13,7 +13,8 @@ const notification = {
       notificationId,
       containerId,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
@@ -27,7 +28,8 @@ const notification = {
       className,
       width,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     );
     notifySubCtrl.success(containerDomNode, rand);
   },
@@ -43,7 +45,8 @@ const notification = {
       notificationId,
       containerId,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
@@ -57,7 +60,8 @@ const notification = {
       className,
       width,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     );
     notifySubCtrl.error(containerDomNode, rand);
   },
@@ -73,7 +77,8 @@ const notification = {
       notificationId,
       containerId,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
@@ -87,7 +92,8 @@ const notification = {
       className,
       width,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     );
     notifySubCtrl.info(containerDomNode, rand);
   },
@@ -103,7 +109,8 @@ const notification = {
       notificationId,
       containerId,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
@@ -117,7 +124,8 @@ const notification = {
       className,
       width,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     );
     notifySubCtrl.warn(containerDomNode, rand);
   },
@@ -133,7 +141,8 @@ const notification = {
       notificationId,
       containerId,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     } = config;
     const { containerDomNode, rand } = generateContainer(
       notificationId,
@@ -147,7 +156,8 @@ const notification = {
       className,
       width,
       onNotificationClick,
-      onNotificationClose
+      onNotificationClose,
+      duration
     );
     notifySubCtrl.openNotification(containerDomNode, rand);
   },

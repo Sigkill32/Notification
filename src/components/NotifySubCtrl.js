@@ -10,7 +10,8 @@ class NotifySubCtrl {
     className,
     width,
     onNotificationClick,
-    onNotificationClose
+    onNotificationClose,
+    duration
   ) {
     this.title = title;
     this.description = description;
@@ -19,6 +20,7 @@ class NotifySubCtrl {
     this.width = width;
     this.onNotificationClick = onNotificationClick;
     this.onNotificationClose = onNotificationClose;
+    this.duration = duration;
   }
 
   error = (containerDomNode, rand) => {
@@ -53,6 +55,7 @@ class NotifySubCtrl {
         onNotificationClick={this.onNotificationClick}
         onNotificationClose={this.onNotificationClose}
         id={rand}
+        duration={this.duration}
       />,
       containerDomNode
     );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import close from "../icons/close.svg";
 
 const Notify = ({
@@ -11,7 +11,8 @@ const Notify = ({
   onNotificationClick,
   onNotificationClose,
   title,
-  subType
+  subType,
+  duration
 }) => {
   const renderNotificationIcon = () => {
     const subTypes = ["error", "info", "success", "warn"];
@@ -34,8 +35,7 @@ const Notify = ({
     if (type === "message") return null;
   };
 
-  const handleClose = e => {
-    const { id } = e.target;
+  const handleClose = () => {
     UnMountNotification(id);
     onNotificationClose(id);
   };
@@ -47,6 +47,14 @@ const Notify = ({
   const UnMountNotification = id => {
     const element = document.querySelector(`#app-notification-${id}`);
     if (element) element.parentNode.removeChild(element);
+  };
+
+  useEffect(() => closeAfterTime(duration), []);
+
+  const closeAfterTime = duration => {
+    if (duration) {
+      setTimeout(() => handleClose(id), duration);
+    } else setTimeout(() => handleClose(id), 2000);
   };
 
   return (
