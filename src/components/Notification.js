@@ -120,6 +120,36 @@ const notification = {
       onNotificationClose
     );
     notifySubCtrl.warn(containerDomNode, rand);
+  },
+
+  open: config => {
+    const {
+      title,
+      description,
+      type,
+      className,
+      width,
+      position,
+      notificationId,
+      containerId,
+      onNotificationClick,
+      onNotificationClose
+    } = config;
+    const { containerDomNode, rand } = generateContainer(
+      notificationId,
+      containerId,
+      position
+    );
+    const notifySubCtrl = new NotifySubCtrl(
+      title,
+      description,
+      type,
+      className,
+      width,
+      onNotificationClick,
+      onNotificationClose
+    );
+    notifySubCtrl.open(containerDomNode, rand);
   }
 };
 

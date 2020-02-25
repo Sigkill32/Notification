@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import Notify from "./components/Notify";
 import notification from "./components/Notification";
 
 class App extends Component {
   state = {};
 
   handleClick = () => {
-    notification.success({
+    notification.open({
       title: "Title",
       description: "Some description",
       type: "notification",

@@ -37,6 +37,10 @@ class NotifySubCtrl {
     this.renderNotification("info", containerDomNode, rand);
   };
 
+  open = (containerDomNode, rand) => {
+    this.renderNotification("open", containerDomNode, rand);
+  };
+
   renderNotification = (subType, containerDomNode, rand) => {
     render(
       <Notify
