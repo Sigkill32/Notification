@@ -150,6 +150,11 @@ const notification = {
       onNotificationClose
     );
     notifySubCtrl.openNotification(containerDomNode, rand);
+  },
+
+  closeNotification: id => {
+    const element = document.querySelector(`#app-notification-${id}`);
+    if (element) element.parentNode.removeChild(element);
   }
 };
 

@@ -20,7 +20,8 @@ class App extends Component {
   };
 
   handleNotClick = id => {
-    console.log(id);
+    console.log("close");
+    notification.closeNotification(id);
   };
 
   render() {
