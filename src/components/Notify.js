@@ -41,7 +41,6 @@ const Notify = ({
   };
 
   const handleClick = () => {
-    console.log("click", id);
     onNotificationClick(id);
   };
 
