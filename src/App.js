@@ -10,8 +10,18 @@ class App extends Component {
       title: "Title",
       description: "Some description",
       type: "notification",
-      position: "topLeft"
+      position: "topRight",
+      onNotificationClose: this.handleClose,
+      onNotificationClick: this.handleNotClick
     });
+  };
+
+  handleClose = () => {
+    console.log("closed");
+  };
+
+  handleNotClick = id => {
+    console.log(id);
   };
 
   render() {

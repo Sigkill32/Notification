@@ -36,13 +36,13 @@ const Notify = ({
 
   const handleClose = e => {
     const { id } = e.target;
-    // onNotificationClose(id);
     UnMountNotification(id);
+    onNotificationClose(id);
   };
 
   const handleClick = () => {
     console.log("click", id);
-    // onNotificationClick(id);
+    onNotificationClick(id);
   };
 
   const UnMountNotification = id => {
@@ -53,12 +53,10 @@ const Notify = ({
   return (
     <div
       className={`notification-container${className ? " " + className : ""}`}
-      // style={{ width: `${width}px`, ...setPosition() }}
       style={{ width: `${width}px` }}
-      onClick={handleClick}
       id={id}
     >
-      <div className='notification'>
+      <div className='notification' onClick={handleClick}>
         {renderNotificationIcon()}
         <div className='notification-title-desc'>
           {renderTitle()}

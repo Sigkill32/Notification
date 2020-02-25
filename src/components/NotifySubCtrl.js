@@ -9,7 +9,7 @@ class NotifySubCtrl {
     type,
     className,
     width,
-    notificationId,
+    // notificationId,
     onNotificationClick,
     onNotificationClose
   ) {
@@ -18,7 +18,7 @@ class NotifySubCtrl {
     this.type = type;
     this.className = className;
     this.width = width;
-    this.notificationId = notificationId;
+    // this.notificationId = notificationId;
     this.onNotificationClick = onNotificationClick;
     this.onNotificationClose = onNotificationClose;
   }
